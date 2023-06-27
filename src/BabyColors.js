@@ -39,29 +39,18 @@ export default function BabyColors() {
                 />
             </div>
         <div className="border-box">
-            {filteredNames.map((el) => {
-                if (el.sex === "f") {
-                    return (
-                        <div
-                            style={{ backgroundColor: "rgb(255, 156, 215)" }}
-                            className="baby-box"
-                            key={el.id}
-                        >
-                            {el.name}
-                        </div>
-                    );
-                } else {
-                    return (
-                        <div
-                        style={{ backgroundColor: "rgb(168, 212, 255)" }}
-                        className="baby-box"
-                        key={el.id}
-                        >
-                        {el.name}
-                        </div>
-                    );
-                }
-            })}
+            {filteredNames.map((el) => (
+            <div
+                style={{
+                backgroundColor:
+                el.sex === "f" ? "rgb(255, 156, 215)" : "rgb(168, 212, 255)",
+                }}
+                className="baby-box"
+                key={el.id}
+                >
+                {el.name}
+            </div>
+            ))}
         </div>
     </div>
     );
