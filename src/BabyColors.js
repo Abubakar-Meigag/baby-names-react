@@ -10,7 +10,7 @@ export default function BabyColors() {
 
     // useState for search
     const [text, setText] = useState("");
-    const [filteredNames, setFilteredNames] = useState([]);
+    const [filteredNames, setFilteredNames] = useState([...sortedNames]);
 
     // filter Names 
     const filterNames = () => {
@@ -34,8 +34,8 @@ export default function BabyColors() {
                 type="text"
                 value={text}
                 id="search"
-                placeholder="Search Names..."
                 onChange={handleChange}
+                placeholder="Search Names..."
                 />
             </div>
         <div className="border-box">
