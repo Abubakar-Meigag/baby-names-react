@@ -10,6 +10,33 @@
   padding: 20px;
 }
 
+.favorite--list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite-box-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.favoriteList-item {
+  margin: 1px;
+  display: flex;
+  border: 0.5px solid;
+  width: 85px;
+  height: 20px;
+  border-radius: 6px;
+  padding: 5px;
+  justify-content: center;
+  color: rgb(53, 53, 72);
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 .baby-box {
   margin: 1px;
   display: flex;
@@ -23,6 +50,7 @@
   color: rgb(53, 53, 72);
   font-size: medium;
   font-weight: bold;
+  cursor: pointer;
 }
 
 h1 {
@@ -44,13 +72,14 @@ h1 {
   cursor: pointer;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
 .baby-boy-color {
   background-color: rgb(168, 212, 255);
 }
+
 .baby-girl-color {
   background-color: rgb(255, 156, 215);
 }
@@ -80,6 +109,7 @@ h1 {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
