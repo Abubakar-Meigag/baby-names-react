@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import babyNames from "./BabyNames";
 import FavoritesList from "./FavoritesList";
+import SortByGender from "./SortByGender";
 
 export default function BabyColors() {
   // sort names
@@ -53,6 +54,7 @@ export default function BabyColors() {
                 onChange={handleChange}
                 placeholder="Search Names..."
             />
+            <SortByGender sortedNames={ sortedNames } />
             </div>
             <></>
                 <div>

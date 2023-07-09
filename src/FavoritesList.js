@@ -1,7 +1,6 @@
 import React from "react";
 
 const FavoritesList = ({ favoriteList }) => {
-  console.log(favoriteList);
   return (
     <>
       <div className="favorite--list">
