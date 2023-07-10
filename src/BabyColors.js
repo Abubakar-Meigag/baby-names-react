@@ -3,7 +3,8 @@ import babyNames from "./BabyNames";
 import FavoritesList from "./FavoritesList";
 import SortByGender from "./SortByGender";
 
-export default function BabyColors() {
+
+export default function BabyColors( { props } ) {
   // sort names
     const sortedNames = [...babyNames].sort((a, b) => {
         return a.name.localeCompare(b.name);
@@ -46,34 +47,38 @@ export default function BabyColors() {
     return (
         <div>
             <div className="search">
-            <></>
-            <input
+                <input
                 type="text"
                 value={text}
                 id="search"
                 onChange={handleChange}
                 placeholder="Search Names..."
             />
-            <SortByGender sortedNames={ sortedNames } />
+            <div className="name-gender-buttons">
+                <SortByGender 
+                sortedNames={sortedNames} 
+                setFilteredNames={setFilteredNames}/>
+            </div>
+
             </div>
             <></>
-                <div>
+            <div>
                 <FavoritesList favoriteList={favoriteList} />
-                </div>
-                <div className="border-box">
-                {filteredNames.map((el) => (
-            <div
-                style={{
-                    backgroundColor:
-                    el.sex === "f" ? "rgb(255, 156, 215)" : "rgb(168, 212, 255",
-                }}
-                className="baby-box"
-                value={el.sex}
-                key={el.id}
-                onClick={() => handleFavorite(el)}
-                >
-                {el.name}
             </div>
+            <div className="border-box">
+            {filteredNames.map((el) => (
+                <div
+                    style={{
+                        backgroundColor:
+                        el.sex === "f" ? "rgb(255, 156, 215)" : "rgb(168, 212, 255",
+                    }}
+                    className="baby-box"
+                    value={el.sex}
+                    key={el.id}
+                    onClick={(() => handleFavorite(el))}
+                    >
+                    {el.name}
+                </div>
             ))}
             </div>
         </div>
