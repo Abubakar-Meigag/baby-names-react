@@ -28,24 +28,4 @@ return (
 };
 
 export default SortByGender;
-
-    
-    /* <button
-        className="reset-names"
-        onClick={() => setFilteredNames(sortedNames)}
-    >
-        Reset
-    </button>
-    <button
-        className="boy-names"
-        onClick={() => setFilteredNames(sortedNames.filter((el) el.sex === "m"))}
-    >
-        Boys
-    </button>
-    <button
-        className="girl-names"
-        onClick={() => setFilteredNames(sortedNames.filter((el) el.sex === "f"))}
-    >
-        Girls
-    </button> */
                 
