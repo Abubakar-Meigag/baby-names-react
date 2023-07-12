@@ -1,15 +1,35 @@
+/*
+
 import React, { useState } from "react";
 import babyNames from "./BabyNames";
 import FavoritesList from "./FavoritesList";
-import SearchNames from "./SearchNames";
+import SortByGender from "./SortByGender";
 
-export default function BabyColors() {
+export default function BabyColors( { props } ) {
+  // sort names
     const sortedNames = [...babyNames].sort((a, b) => {
         return a.name.localeCompare(b.name);
     });
 
+  // useState for search & favorites
+    const [text, setText] = useState("");
     const [filteredNames, setFilteredNames] = useState([...sortedNames]);
     const [favoriteList, setFavoriteList] = useState([]);
+
+  // filter Names
+    const filterNames = () => {
+        const searchInput = text.toLowerCase();
+        const searchForNames = sortedNames.filter((el) =>
+        el.name.toLowerCase().includes(searchInput)
+        );
+        setFilteredNames(searchForNames);
+    };
+
+    const handleChange = (event) => {
+        setText(event.target.value);
+        filterNames();
+        event.preventDefault()
+    };
 
     const handleFavorite = (el) => {
         setFavoriteList(() => [...favoriteList, {name: el.name, sex: el.sex}]);
@@ -22,13 +42,30 @@ export default function BabyColors() {
             return filteredNames;
         })
     };
+    
+
 
     return (
         <div>
-            <SearchNames 
-            sortedNames={sortedNames}
-            setFilteredNames={setFilteredNames} />
-            <FavoritesList favoriteList={favoriteList} />
+            <div className="search">
+                <input
+                type="text"
+                value={text}
+                id="search"
+                onChange={handleChange}
+                placeholder="Search Names..."
+            />
+            <div className="name-gender-buttons">
+                <SortByGender 
+                sortedNames={sortedNames} 
+                setFilteredNames={setFilteredNames}/>
+            </div>
+
+            </div>
+            <></>
+            <div>
+                <FavoritesList favoriteList={favoriteList} />
+            </div>
             <div className="border-box">
             {filteredNames.map((el) => (
                 <div
@@ -48,3 +85,5 @@ export default function BabyColors() {
         </div>
     );
 }
+
+*/

@@ -2,7 +2,7 @@ import React from "react";
 
 const FavoritesList = ({ favoriteList }) => {
   return (
-    <>
+    <div>
       <div className="favorite--list">
         <h2>Favorite Name List</h2>
       </div>
@@ -22,7 +22,7 @@ const FavoritesList = ({ favoriteList }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

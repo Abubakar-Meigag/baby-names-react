@@ -13,7 +13,7 @@ const SortByGender = ({ sortedNames, setFilteredNames }) => {
     };
     
 return (
-    <>
+    <div className="name-gender-buttons">
         <button className="reset-names Sort-btn" onClick={handelResetNames}>
             Reset
         </button>
@@ -23,7 +23,7 @@ return (
         <button className="girl-names Sort-btn" onClick={handelGirls}>
             Girls
         </button>
-    </>
+    </div>
     );
 };
 
