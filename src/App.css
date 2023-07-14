@@ -1,10 +1,122 @@
-.App {
-  text-align: center;
+.border-box {
+  margin: 15px;
+  border: 5px black solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.favorite--list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favorite-box-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.favoriteList-item {
+  margin: 1px;
+  display: flex;
+  border: 0.5px solid;
+  width: 85px;
+  height: 20px;
+  border-radius: 6px;
+  padding: 5px;
+  justify-content: center;
+  color: rgb(53, 53, 72);
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.baby-box {
+  margin: 1px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid;
+  width: 85px;
+  height: 20px;
+  border-radius: 6px;
+  padding: 5px;
+  justify-content: center;
+  color: rgb(53, 53, 72);
+  font-size: medium;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#search {
+  width: 250px;
+  height: 40px;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.baby-boy-color {
+  background-color: rgb(168, 212, 255);
+}
+
+.baby-girl-color {
+  background-color: rgb(255, 156, 215);
+}
+.Sort-btn {
+  height: 50px;
+  font-weight:bolder;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(21, 22, 12, 0.331);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(171, 76, 76, 0.2);
+  font-family: 'Roboto', sans-serif;
+  font-weight:900;
+  font-size: 14px;
+  color: #043926;
+}
+.name-gender-buttons{
+  margin-top: 10px;
+}
+
+.reset-names{
+  background-color: rgb(118, 118, 116);
+  color: white;
+}
+.boy-names {
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: rgb(168, 212, 255);
+}
+.girl-names {
+  background-color: rgb(255, 156, 215);
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,6 +144,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
